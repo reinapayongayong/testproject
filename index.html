@@ -1,0 +1,78 @@
+<html>
+<style>
+	input {
+		padding: 5px;
+	}
+	.upper {
+		text-transform: uppercase;
+	}
+	.lower {
+		text-transform: lowercase;
+	}
+	.button {
+	  border: none;
+	  color: white;
+	  padding: 10px 15px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  transition-duration: 0.4s;
+	  cursor: pointer;
+	  border-radius: 5px;
+	}
+
+	.button1 {
+	  background-color: #4CAF50;
+	  color: white;
+	  border: 2px solid #4CAF50;
+	}
+
+	.button1:hover {
+	  background-color: white; 
+	  color: black; 
+	}
+
+	.button2 {
+	  background-color: #008CBA;
+	  color: white; 
+	  border: 2px solid #008CBA;
+	}
+
+	.button2:hover {
+	  background-color: white; 
+	  color: black; 
+	}
+</style>
+
+<script>
+	function copy(value) {
+		document.getElementById('out').value = value;
+	}
+	function upper() {
+		var text = document.getElementById("out");
+		 text.className = "upper";
+	}
+	function lower() {
+		var text = document.getElementById("out");	
+		 text.className = "lower";
+	}
+</script>
+	<body style="background-color: #634832;">
+		<div style="margin: auto; background-color: white; width: 250px; padding: 5px;">
+			<font face = "arial">
+				<div style="margin: 20px;">
+					<label><b>Input text here: </b></label><br>
+					<input type="text" name="" onkeyup="copy(this.value);">
+					<br><br>
+					<button class="button button1" onclick="upper()">Upper</button>
+					<button class="button button2" onclick="lower()">Lower</button>
+					<br><br>
+					<label><b>This is the output: </b></label><br>
+					<input type="text" id="out" name="" readonly>
+				</div>
+			</font>
+		</div>
+	</body>
+</html>
